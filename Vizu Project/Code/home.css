@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f1ecec;
+}
+
+.hero {
+  background-color: #4b6fd1;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 140px;
+  max-width: 30vw;
+}
+
+.title {
+  width: 290px;
+  max-width: 50vw;
+}
+
+.slogan {
+  margin-top: 30px;
+  width: 400px;
+  max-width: 90vw;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 30px;   
+}
+
+.btn1 {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  color: #4b6fd1;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.btn1:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.btn2 {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  color: #4b6fd1;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.btn2:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.projects-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.projects-heading {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card h3 {
+  font-size: 18px;
+  color: #4b6fd1;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.project-card .preview {
+  font-size: 14px;
+  color: #555;
+  height: 80px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.project-card button {
+  background-color: #4b6fd1;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.project-card button:hover {
+  background-color: #3d5fc2;
+}
+
+.delete-btn {
+    margin-right: 5px;
+}
+
+.delete-btn:last-child {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #db7a70;
+}
+

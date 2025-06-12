@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizu</title>
+    <link rel="stylesheet" href="vizu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="toolbar">
+        <!-- Group 1 -->
+        <img src="Add.svg" data-cmd="addpage" alt="Add Page">
+        <img id="deletePage" src="Delete.svg" title="Delete Page">
+        <div class="divider"></div>
+
+        <!-- Group 2 -->
+        <img src="Bold.svg" data-cmd="bold" alt="Bold">
+        <img src="Italic.svg" data-cmd="italic" alt="Italic">
+        <img src="Underline.svg" data-cmd="underline" alt="Underline">
+        <img id="heading" src="Heading.svg" data-cmd="heading" alt="Heading">
+        <div class="divider"></div>
+
+        <!-- Group 3 -->
+        <img id="colortext" src="Colortext.svg" alt="Text Color">
+        <input type="color" id="colorPicker" style="display: none;">
+        <img id="fill" src="fill.svg" alt="Fill Color">
+        <input type="color" id="colorPicker2" style="display: none;">
+        <div class="divider"></div>
+
+        <!-- Group 4 -->
+        <img id="list" src="List.svg" alt="List">
+        <div class="align-dropdown">
+            <img id="align-toggle" src="Align.svg" alt="Align">
+            <div class="align-options">
+                <img src="Left.svg" data-cmd="justifyLeft" alt="Align Left">
+                <img src="Centerr.svg" data-cmd="justifyCenter" alt="Align Center">
+                <img src="Right.svg" data-cmd="justifyRight" alt="Align Right">
+                <img src="Full.svg" data-cmd="justifyFull" alt="Justify Full">
+            </div>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Group 5 -->
+        <div class="font-dropdown">
+            <img id="font-toggle" src="font.svg" alt="Font">
+            <div class="font-options">
+                <button data-cmd="fontName" data-value="Arial">Arial</button>
+                <button data-cmd="fontName" data-value="Georgia">Georgia</button>
+                <button data-cmd="fontName" data-value="Courier New">Courier</button>
+                <button data-cmd="fontName" data-value="Verdana">Verdana</button>
+            </div>
+        </div>
+        <div class="divider"></div>
+
+        <!-- Group 6 -->
+        <img id="undo" src="Undo.svg" data-cmd="undo" alt="Undo">
+        <img id="redo" src="Redo.svg" data-cmd="redo" alt="Redo">
+        <div class="divider"></div>
+
+        <!-- Group 7 -->
+        <label for="file-upload" class="custom-file-upload">
+            <img src="image.svg" alt="Insert Image" />
+        </label>
+        <input id="file-upload" type="file" style="display: none;" accept=".jpg, .jpeg, .png" />
+        <div class="divider"></div>
+
+        <!-- Group 8 -->
+        <img id="save" src="Save.svg" alt="Save">
+        <img id="saveLocal" src="Download.svg" alt="Download PDF">
+    </div>
+
+    <audio id="myAudio">
+        <source src="pagesound.MP3" type="audio/mp3">
+    </audio>
+
+    <div id="paper"></div>
+
+    <div class="status-bar">
+        Σελίδα <span id="currentPage">1</span> από <span id="totalPages">1</span>
+    </div>
+
+    <script src="vizu.js"></script>
+
+    <script>
+        window.addEventListener("beforeunload", function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+    </script>
+</body>
+
+</html>
